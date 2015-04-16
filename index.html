@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tearable Cloth</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<canvas id="c"></canvas>
+
+<div id="info">
+    <div id="top">
+        <a id="close" href="">Close tips</a>
+    </div>
+    <p>
+        <br>- Tear the cloth with your mouse.
+        <br>
+        <br>- Right click and drag to cut the cloth
+        <br>
+        <br>- Reduce physics_accuracy if it's laggy.
+        <br>
+        <br>
+    </p>
+</div>
+
+<script type="text/javascript">
+    document.getElementById('close').onmousedown = function(e) {
+        e.preventDefault();
+        document.getElementById('info').style.display = 'none';
+        return false;
+    };
+</script>
+<script type="text/javascript" src="Cloth.js"></script>
+</body>
+</html>
